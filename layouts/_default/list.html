@@ -1,5 +1,5 @@
 {{- define "main" -}}
-{{- $paginator := .Paginator -}}
+{{- $paginator := .Paginate (first 50 (where site.RegularPages "Type" "in" site.Params.mainSections)) -}}
 
 {{- $title := T .Title -}}
 {{- if not $title -}}
