@@ -9,3 +9,7 @@
 {{- partial "syntax.html" . -}}
 {{- template "_internal/google_analytics_async.html" . -}}
 {{- partial "custom-js.html" . -}}
+<script>
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
+</script>
