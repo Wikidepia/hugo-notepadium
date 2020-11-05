@@ -1,4 +1,22 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "MediaObject",
+      "name": "{{- .Title | safeHTML -}}",
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "{{- site.Title | safeHTML -}}"
+        }
+      }
+    }
+ </script>
 <!--
     for user-side override
 -->
