@@ -1,3 +1,6 @@
+{{ range first 5 (shuffle (where (where .Site.RegularPages "Section" "post") "Title" "!=" .Title )) }}
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+{{ end }}
 <!--
     for user-side override
 -->
